@@ -1,0 +1,36 @@
+/* Element selector: targets every <p> */
+p {
+  color: #333; /* hex color */
+}
+
+/* Class selector: reusable, starts with a dot */
+.highlight {
+  background-color: rgb(255, 235, 59); /* rgb color */
+  padding: 8px;
+}
+
+/* ID selector: unique, starts with # */
+#special {
+  color: hsl(220, 80%, 45%); /* hsl: hue, saturation, lightness */
+  font-weight: bold;
+}
+
+/* Pseudo-class: styles a state */
+a {
+  color: #2b4acb;
+  text-decoration: none;
+}
+a:hover {
+  color: #e91e63;
+  text-decoration: underline;
+}
+
+/* Structural pseudo-class: every second list item */
+li:nth-child(even) {
+  background: #f0f0f0;
+}
+
+/* Group selector: same style for several elements */
+h1, h2 {
+  font-family: Arial, sans-serif;
+}
