@@ -1,0 +1,72 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+main { padding: 24px; }
+
+/* sticky: scrolls normally, then sticks at top: 0 */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: #fff;
+  padding: 16px;
+  z-index: 10; /* keeps it above other content */
+}
+
+/* The parent needs position: relative so the child
+   uses it as its reference point. */
+.product {
+  position: relative;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  max-width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* absolute: placed exactly using top / right */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #e91e63;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* relative: moves from its original spot, space is kept */
+.shifted {
+  position: relative;
+  left: 20px;
+  top: 10px;
+  background: #e8efff;
+  padding: 16px;
+  margin-top: 24px;
+  max-width: 320px;
+}
+
+.filler {
+  height: 400px;
+  margin-top: 24px;
+  background: #fff;
+  padding: 16px;
+}
+
+/* fixed: stays in place relative to the screen */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #2b4acb;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+}
