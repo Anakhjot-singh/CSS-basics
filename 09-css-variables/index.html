@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="panel">
+    <h1>CSS Variables</h1>
+    <p>Change one value in <code>:root</code> and the whole page updates.</p>
+    <button class="btn">Primary Button</button>
+
+    <!-- Click to toggle dark mode (the script adds a class to body) -->
+    <button class="btn outline" id="toggle">Toggle Dark Mode</button>
+  </main>
+
+  <script>
+    // Adds or removes the "dark" class on <body>
+    document.getElementById("toggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
