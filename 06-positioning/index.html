@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positioning</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sticky header: stays at the top while scrolling -->
+  <header class="sticky-header">Sticky Header</header>
+
+  <main>
+    <h1>Positioning</h1>
+
+    <!-- Absolute badge placed inside a relative parent -->
+    <div class="product">
+      <span class="badge">NEW</span>
+      <h2>Product Card</h2>
+      <p>The badge is positioned relative to this card.</p>
+    </div>
+
+    <!-- Relative: shifted from its normal position -->
+    <div class="shifted">I am shifted with position: relative</div>
+
+    <!-- Filler text so the page can scroll -->
+    <div class="filler">Scroll down to see the sticky header and the fixed button.</div>
+    <div class="filler"></div>
+    <div class="filler"></div>
+  </main>
+
+  <!-- Fixed: always visible in the corner of the screen -->
+  <a href="#" class="back-to-top">Top</a>
+</body>
+</html>
