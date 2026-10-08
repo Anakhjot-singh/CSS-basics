@@ -1,0 +1,56 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 24px;
+  background: #f4f6f8;
+}
+
+.item {
+  background: #2b4acb;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+/* display:flex turns the parent into a flex container.
+   Its children become flex items in a row. */
+.row {
+  display: flex;
+  justify-content: space-between; /* main axis (horizontal) */
+  align-items: center;            /* cross axis (vertical) */
+  gap: 12px;
+}
+
+/* Centering both ways: the classic trick */
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  background: #e8efff;
+  border-radius: 8px;
+}
+
+/* flex-wrap lets items move to the next line.
+   flex: 1 1 200px means grow, shrink, start at 200px. */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.card {
+  flex: 1 1 200px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Column direction stacks items vertically */
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 200px;
+}
