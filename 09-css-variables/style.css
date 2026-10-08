@@ -1,0 +1,58 @@
+/* Custom properties start with -- and are usually declared on :root.
+   Define once, reuse everywhere with var(). */
+:root {
+  --primary: #2b4acb;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --text: #222222;
+  --radius: 10px;
+  --space: 16px;
+}
+
+/* Dark theme: only the variables change, not the rules below */
+body.dark {
+  --bg: #121826;
+  --surface: #1e2638;
+  --text: #f1f1f1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: calc(var(--space) * 2);
+  transition: background 0.3s, color 0.3s;
+}
+
+.panel {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: calc(var(--space) * 2);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+  border: 2px solid var(--primary);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--primary);
+}
+
+code {
+  background: rgba(127, 127, 127, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
