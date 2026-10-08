@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 24px;
+  background: #f4f6f8;
+}
+
+.box {
+  background: #2b4acb;
+  color: #fff;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* 3 equal columns. "fr" is a fraction of the free space. */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Responsive without media queries:
+   as many columns as fit, each at least 150px wide. */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+/* Named areas: draw the layout like a map */
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 10px;
+  min-height: 300px;
+}
+.layout header { grid-area: header; background: #111; color: #fff; padding: 16px; }
+.layout nav    { grid-area: sidebar; background: #e8efff; padding: 16px; }
+.layout main   { grid-area: main; background: #fff; padding: 16px; }
+.layout footer { grid-area: footer; background: #111; color: #fff; padding: 16px; }
+
+/* On small screens, stack everything in one column */
+@media (max-width: 600px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "sidebar" "main" "footer";
+  }
+}
