@@ -1,0 +1,57 @@
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+.site-header {
+  background: #2b4acb;
+  color: #fff;
+  text-align: center;
+  padding: 32px 16px;
+}
+
+/* clamp(min, preferred, max): fluid font size */
+.site-header h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  margin: 0 0 8px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* MOBILE-FIRST: base styles are for phones (1 column) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Images never overflow their container */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Tablet: 2 columns from 600px up */
+@media (min-width: 600px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop: 3 columns from 900px up */
+@media (min-width: 900px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
