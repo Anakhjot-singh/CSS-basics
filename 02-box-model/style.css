@@ -1,0 +1,32 @@
+/* Apply border-box to everything so width includes padding and border.
+   This is the first rule in most professional stylesheets. */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 24px;
+  background: #f4f6f8;
+}
+
+.box {
+  width: 300px;          /* content width */
+  max-width: 100%;       /* never overflow small screens */
+  padding: 20px;         /* space inside the border */
+  border: 2px solid #2b4acb;
+  margin: 16px 0;        /* space outside the border */
+  background: #fff;
+}
+
+/* Rounded corners */
+.rounded {
+  border-radius: 16px;
+}
+
+/* Shadow: x-offset, y-offset, blur, color */
+.shadow {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
